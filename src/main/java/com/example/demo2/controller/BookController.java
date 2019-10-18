@@ -24,15 +24,6 @@ public class BookController {
 
   @GetMapping("/books")
   @ResponseBody
-  public String home() {
-    return "{\n"
-      + "status: 200,\n"
-      + "message: Basic library catalogue,\n" 
-      + "}";
-  }
-
-  @GetMapping("/books")
-  @ResponseBody
   public List<Book> getAllBooks(@RequestParam(required = false) Map<String, String> value) {
     if(value.isEmpty()) {
       return bookRepository.findAll();
