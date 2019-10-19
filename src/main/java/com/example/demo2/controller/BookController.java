@@ -3,10 +3,11 @@ package com.example.demo2.controller;
 import java.util.List;
 import java.util.Map;
 
-import com.example.demo2.repository.BookRepository;
 import com.example.demo2.model.Book;
+import com.example.demo2.repository.BookRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/api/v1")
+@CrossOrigin()
 public class BookController {
   @Autowired
   private BookRepository bookRepository;
